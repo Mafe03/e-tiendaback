@@ -3,11 +3,11 @@
 //Instanciamos los modulos requeridos
 const express = require("express");
 const app = express(); //creamos nuestra aplicacion lamando el metodo construtor de express
-require("dotenv/config")
+require("dotenv/config");
 const authJwt = require("./helpers/jwt");
 
 app.use("/", require("./modules/productos"));
-app.use("/", require("./modules/usuarios")); //redirigimos al modulo Producto donde se resolveran las rutas
+app.use("/", require("./modules/usuarios")); //redirigimos al modulo Producto donde se resolveran las rutass
 app.use("/", require("./modules/categorias"));
 app.use(authJwt);
 
